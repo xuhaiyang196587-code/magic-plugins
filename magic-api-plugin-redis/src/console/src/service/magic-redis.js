@@ -16,9 +16,9 @@ export default (request, $i, modal, JavaClass) => {
 		doTest: info => {
 			request.sendJson('/redis/jdbc/test', info).success(res => {
 				if (res === 'ok') {
-					modal.alert($i('mqtt.connected'), $i('mqtt.test'))
+					modal.alert($i('redis.connected'), $i('redis.test'))
 				} else {
-					modal.alert($i('mqtt.connectFailed', res), $i('mqtt.test'))
+					modal.alert($i('redis.connectFailed', res), $i('redis.test'))
 				}
 			})
 		}
