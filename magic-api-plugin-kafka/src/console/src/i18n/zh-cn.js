@@ -1,5 +1,5 @@
 export default {
-    mqtt:{
+    kafka:{
         title: 'Kafka',
         name: 'Kafka数据源',
         copySuccess: '复制{0}成功',
