@@ -11,7 +11,7 @@
 			    </div>
 			    <div class="magic-form-row">
 			        <label>{{$i('tcp.form.type')}}</label>
-			        <magic-select inputable  @update:value="handleChange" v-model:value="info.type" width="100%" :options="constants.TCP_TYPES.map(it => { return {text: it, value: it} })" :placeholder="$i('tcp.form.placeholder.type')"/>
+			        <magic-select inputable  @update:value="handleChange" v-model:value="info.type" width="100%" :options="constants.map(it => { return {text: it, value: it} })" :placeholder="$i('tcp.form.placeholder.type')"/>
 			    </div>
 			 
 			    <div class="magic-form-row">
@@ -24,7 +24,10 @@
 <script setup>
 import { ref, watch, inject,defineProps } from 'vue'
 const $i = inject('i18n.format')
-const constants = inject('constants')
+const constants = ref([
+			'client',
+			'server'
+		])
 const { info } = defineProps({
     info: Object
 })

@@ -18,7 +18,7 @@ export default (opt) => {
 			// 展示标题
 			title: 'Tcp',
 			// 展示名称
-			name: i18n.format('mqtt.name'),
+			name: i18n.format('tcp.name'),
 			// 运行服务 request, $i, modal, JavaClass
 			service: MagicTcp(opt.request, i18n.format , opt.modal, opt.JavaClass),
 			// 表单组件
